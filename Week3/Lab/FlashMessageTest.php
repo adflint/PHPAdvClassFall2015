@@ -3,11 +3,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Flash Message Test</title>
     </head>
     <body>
         <?php
-        
+        //create and start a session
         session_start();
          include './models/IMessage.php';
          include './models/Message.php';
