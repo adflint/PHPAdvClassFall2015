@@ -15,9 +15,9 @@
     <body>
         <?php
         
-         include './models/IMessasge.php';
-         include './models/Messasge.php';
-         include './models/ErrorMessasge.php';
+         include './models/IMessage.php';
+         include './models/Message.php';
+         include './models/ErrorMessage.php';
         
         $message = new Message();
         
@@ -27,7 +27,7 @@
         echo '<br />';
         var_dump($message instanceof IMessage);
         echo '<br />';
-        var_dump($message->removeMessages('test'));
+        var_dump($message->removeAllMessages('test'));
         echo '<br />';
         var_dump($message->getAllMessages());
         echo '<br />';
