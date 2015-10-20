@@ -5,7 +5,7 @@
  * @author adf03_000
  */
 interface IMessage {
-    //put your code here
+    //methods and functions
     
     public function addMessage($key, $msg); 
     public function removeMessage($key);
