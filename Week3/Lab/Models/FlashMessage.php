@@ -5,6 +5,9 @@
  *
  * @author adf03_000
  */
+
+//Flash message class that is in addition to message class.
+//It can make changes w/o changing anything in the message class.
 class FlashMessage extends Message {
 
     public function __construct() {
