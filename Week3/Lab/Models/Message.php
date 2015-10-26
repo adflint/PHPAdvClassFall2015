@@ -6,9 +6,9 @@
  * @author adf03_000
  */
 
-
+require_once 'database.php';
 class Message implements IMessage{
-    
+   
     private $messages = array();
     
     public function addMessage($key, $msg){
