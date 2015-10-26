@@ -15,7 +15,7 @@ class Message implements IMessage{
     }
     
     public function removeMessage($key){
-        unset($this->messages);
+        unset($this->message);
     }
     
     public function getAllMessages(){
