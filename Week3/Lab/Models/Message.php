@@ -5,8 +5,11 @@
  *
  * @author adf03_000
  */
+if(!class_exists('Message')){ include 'Message.php'; }
 
 class Message implements IMessage{
+    
+    
     
     protected $messages = array();
     
@@ -26,3 +29,4 @@ class Message implements IMessage{
          $this->messages = [];
     }
 }
+    
