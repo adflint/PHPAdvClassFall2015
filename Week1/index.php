@@ -3,34 +3,37 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Results</title>
+        <title></title>
     </head>
     <body> 
         
         <?php
         // put your code here
-$servername = "localhost:81";
-$dbname = "PHPAdvClassFall2015";
+        
+        $config = array(
+            'DB_DNS' => 'mysql:host=localhost81;port3306;dbname=PHPAdvClassFall2015',
+            'DB_USER' => 'php',
+            'DB_PASSWORD' => 'fall15'
+        );
 
-// Create connection
-$connection = new connection($servername, $dbname);
-// Check connection
-if ($connection->connect_error) {
-    ("Connection failed: " . $connection->connect_error);
-} 
+        try{
+            $db = new PDO($config['DB_DNS'], $config['DB_USER'], $config['DB_PASSWORD']);
+            $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            exit();
+        }
 
-$sql = "SELECT * FROM address";
-$result = $connection->query($sql);
+        var_dump($db);
+        
+        $stmt = $db->prepare("SELECT * FROM addresses");
+        
+        if($stmt->execute() && $stmt->rowCount() > 0){
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            var_dump($results);
+        }
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$connection->close();
         ?>
     </body>
 </html>
