@@ -6,7 +6,7 @@
  * @author adf03_000
  */
 
-require_once 'Message.php';
+require_once("lib/message.php");
 class Message implements IMessage{
    
     private $messages = array();
