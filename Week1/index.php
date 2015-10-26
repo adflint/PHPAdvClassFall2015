@@ -12,8 +12,8 @@
         
         $config = array(
             'DB_DNS' => 'mysql:host=localhost;port3306;dbname=phpadvclassfall2015',
-            'DB_USER' => '',
-            'DB_PASSWORD' => ''
+            'DB_USER' => 'php',
+            'DB_PASSWORD' => 'Fall15'
         );
 
         try{
