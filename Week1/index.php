@@ -13,13 +13,13 @@ $servername = "localhost:81";
 $dbname = "PHPAdvClassFall2015";
 
 // Create connection
-$connection = new myphpAdmin($servername, $dbname);
+$connection = new connection($servername, $dbname);
 // Check connection
 if ($connection->connect_error) {
     ("Connection failed: " . $connection->connect_error);
 } 
 
-$sql = "SELECT * FROM addresses";
+$sql = "SELECT * FROM address";
 $result = $connection->query($sql);
 
 if ($result->num_rows > 0) {
