@@ -9,8 +9,6 @@
 
 class Message implements IMessage{
     
-    
-    
     protected $messages = array();
     
     public function addMessage($key, $msg){
