@@ -3,13 +3,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Test Message</title>
+        <title></title>
     </head>
     <body>
         <?php
         include './models/IMessage.php';
         include './models/Message.php';
-        include './models/TestMessage.php';
+        include './models/Message.php';
         
         $message = new Message();
         
