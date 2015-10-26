@@ -6,7 +6,7 @@
  * @author adf03_000
  */
 
-
+ 
 class Message implements IMessage{
    
     private $messages = array();
