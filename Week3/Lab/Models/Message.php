@@ -9,7 +9,7 @@
  
 class Message implements IMessage{
    
-    protected $messages = array();
+    protected $message = array();
     
     public function addMessage($key, $msg){
         $this->message[$key] = $msg;
