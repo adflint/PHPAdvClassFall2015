@@ -7,7 +7,7 @@
  */
 
  
-class Messages implements IMessage{
+class Message implements IMessage{
    
     protected $messages = array();
     
