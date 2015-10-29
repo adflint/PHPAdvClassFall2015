@@ -14,7 +14,7 @@ class FlashMessage extends Message {
 
         if (!isset($_SESSION['flashmessages'])) {
             $_SESSION['flashmessages'] = array();
-            $this->messages = $_SESSION['flashmessages'];
+            $this->message = $_SESSION['flashmessages'];
         }
     }
 
@@ -36,7 +36,7 @@ class FlashMessage extends Message {
     }
 
     private function setFlashMessages() {
-        $_SESSION['flashmessages'] = $this->messages;
+        $_SESSION['flashmessages'] = $this->message;
     }
 
 }
