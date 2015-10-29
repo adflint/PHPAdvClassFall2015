@@ -30,10 +30,6 @@
                 $errors[] = 'Password is not valid';
             }
 
-            if ($password === $password) {
-                $errors[] = 'Password is not valid';
-            }
-
             if (count($errors) <= 0) {
                  $options = [
                 'cost' => 11,
