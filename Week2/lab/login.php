@@ -7,26 +7,28 @@
     </head>
     <body>
         <?php
+
         // put your code here
         class Login {
-    
-    
-    private $db;
 
-    function __construct() {
-        
-        $util = new Util();
-        $dbo = new DB($util->getDBConfig());
-        $this->setDb($dbo->getDB());        
-    }
+            private $db;
 
-    private function getDb() {
-        return $this->db;
-    }
+            function __construct() {
 
-    private function setDb($db) {
-        $this->db = $db;
-    }
+                $util = new Util();
+                $dbo = new DB($util->getDBConfig());
+                $this->setDb($dbo->getDB());
+            }
+
+            private function getDb() {
+                return $this->db;
+            }
+
+            private function setDb($db) {
+                $this->db = $db;
+            }
+
+        }
         ?>
     </body>
 </html>
