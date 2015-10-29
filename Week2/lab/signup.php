@@ -30,7 +30,7 @@
                 $errors[] = 'Password is not valid';
             }
 
-            if ($password == $password) {
+            if ($password === $password) {
                 $errors[] = 'Password is not valid';
             }
 
