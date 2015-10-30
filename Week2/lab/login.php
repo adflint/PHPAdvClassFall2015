@@ -12,7 +12,7 @@
         $email = filter_input(INPUT_POST, 'email');
         $password = filter_input(INPUT_POST, 'password');
         
-        $util = new Util();
+        
         $validtor = new Validator();
         $login = new Login();
 
