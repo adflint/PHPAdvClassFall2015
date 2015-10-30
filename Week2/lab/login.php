@@ -24,7 +24,7 @@
 
             function __construct() {
 
-                $util = new Util();
+                
                 $dbo = new DB($util->getDBConfig());
                 $this->setDb($dbo->getDB());
             }
