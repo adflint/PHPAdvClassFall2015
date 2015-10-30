@@ -13,7 +13,7 @@
         $password = filter_input(INPUT_POST, 'password');
         
         
-        $validtor = new Validator();
+        
         $login = new Login();
 
         $errors = array();
