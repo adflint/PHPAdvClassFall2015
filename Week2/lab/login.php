@@ -9,8 +9,14 @@
         <h1>Login</h1>
         <?php
 
-        $username = filter_input(INPUT_POST, 'username');
+        $email = filter_input(INPUT_POST, 'email');
         $password = filter_input(INPUT_POST, 'password');
+        
+        $util = new Util();
+        $validtor = new Validator();
+        $login = new Login();
+
+        $errors = array();
         
         class Login {
               
@@ -32,8 +38,8 @@
             }
 
             function Login() {
-                if (empty($_POST['username'])) {
-                    $this->HandleError("UserName is empty!");
+                if (empty($_POST['$email'])) {
+                    $this->HandleError("Email is empty!");
                     return false;
                 }
 
@@ -43,17 +49,17 @@
                 }
 
 
-                if (!$this->CheckLoginInDB($username, $password)) {
+                if (!$this->CheckLoginInDB($email, $password)) {
                     return false;
                 }
 
                 session_start();
 
-                $_SESSION[$this->GetLoginSessionVar()] = $username;
+                $_SESSION[$this->GetLoginSessionVar()] = $$email;
 
-                return true;
+            return true;
+
             }
-
         }
         ?>
     </body>
