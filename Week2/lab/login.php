@@ -6,7 +6,7 @@
         <title>Login Page</title>
     </head>
     <body>
-        <h1>Login</h1>
+        
         <?php
 
         $email = filter_input(INPUT_POST, 'email');
