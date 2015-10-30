@@ -62,5 +62,9 @@
             }
         }
         ?>
+        <?php include './models_signup.php'; ?>
+        <?php include './models_Util.php'; ?>
+        <h1>Login</h1>
+        <?php include './templates/login-form.html.php'; ?>
     </body>
 </html>
