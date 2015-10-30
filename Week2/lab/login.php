@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Login Page</title>
+        <title>Login Form</title>
     </head>
     <body>
         
@@ -61,7 +61,7 @@
         ?>
         
         
-        <h1>Login</h1>
+        <h1>Login Form</h1>
         <?php include './templates/login-form.html.php'; ?>
     </body>
 </html>
