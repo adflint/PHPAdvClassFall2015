@@ -25,12 +25,20 @@ class Signup {
         $this->db = $db;
     }
 
-    
+    public function emailExist($email){
+        $stmt = $this->getDb()->prepare("SELECT * FROM  users WHERE email = :email");
+        $binds = array(
+            ":email" => $email);
+            if ($stmt->execute($binds) && $stmt->rowCount() > 0) {
+           return true;
+        }
+        return false;
+    }
 
     public function save($email, $password) {
         
         $stmt = $this->getDb()->prepare("INSERT INTO users set email = :email, password = :password, created = now()");
-                
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $binds = array(
             ":email" => $email,
             ":password" => $password

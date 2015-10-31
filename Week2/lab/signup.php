@@ -31,8 +31,22 @@
             if ($password == "") {
                 $errors[] = 'Password is not valid';
             }
-
+            if ($signup->emailExist($email)){
+                $errors[] = 'Email already taken!';
+            }
+            if (count($errors) <= 0) {
+               if ( $signup->save($email, $password) ) {
+                   $message = 'You signed up!';
+               }
+               else {
+                   $errors = 'Try Again!';
+               }
+                
+            }
+            
         }
+        
+        
         ?>
         
         <?php include './templates/errors.html.php'; ?>
