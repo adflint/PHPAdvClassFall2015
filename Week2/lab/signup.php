@@ -35,12 +35,6 @@
         }
         ?>
         
-        <form method="Post" action="#">
-        email: <input type="email" name="email" value="" />
-        password: <input type="password" name="password" value="" />
-        <input type="submit" value="Submit" />  
-        </form>
-        
         <?php include './templates/errors.html.php'; ?>
         <?php include './templates/messages.html.php'; ?>
         <?php include './templates/login-form.html.php'; ?>
